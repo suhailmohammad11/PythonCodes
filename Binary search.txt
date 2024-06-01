@@ -1,0 +1,26 @@
+#Binary search technique
+
+def binarySearch(arr,n):
+    low=0
+    high=len(arr)-1
+    mid=0
+    
+    while low<=high:
+        mid=(low+high)//2
+        
+        if arr[mid]<n:
+            low=mid+1
+        elif arr[mid]>n:
+            high=mid-1
+        else :
+            return mid
+    return -1
+
+arr=[2,3,4,6,8,10]
+n=9
+result=binarySearch(arr,n)
+
+if result !=-1:
+    print("Element found at ",str(result+1))
+else :
+    print("Element not found ")

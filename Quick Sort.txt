@@ -1,0 +1,12 @@
+#quick sort using python
+
+def quickSort(arr):
+    if len(arr)<=1:
+        return arr
+    pivot=arr[len(arr)//2]
+    left=[i for i in arr if i<pivot]
+    middle=[j for j in arr if j==pivot]
+    right=[k for k in arr if k>pivot]
+    return quickSort(left)+middle+quickSort(right)
+arr=[23,12,45,33,21]
+quickSort(arr)
