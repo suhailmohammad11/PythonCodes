@@ -1,0 +1,15 @@
+#bubble sort
+def bubbleSort(arr):  #[5,7,4,6,2,9,1]
+    n=len(arr)
+    for j in range(n-1):
+        for i in range(0,n-j-1):
+            if arr[i]>arr[i+1]:
+                arr[i],arr[i+1]=arr[i+1],arr[i]
+ 
+   
+arr=[5,7,4,6,2,9,1]
+bubbleSort(arr)
+print(arr)
+
+#here the first iteration describes how many times the iteration should happen
+#the second iteration shows the inner comparisons     
